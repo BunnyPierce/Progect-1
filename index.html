@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <div class="body bg-gradient-to-br from-teal-400 to-blue-900 mt-0 w-screen">
+        <header class="sticky top-0 bg-gradient-to-br from-teal-400 to-blue-900 z-50">
+            <nav class="px-4 py-3 font-semibold text-[20px] text-white flex justify-evenly items-center">
+                <div>
+                    <a href="index.html">
+                    <img class="max-w-24 inline-block cursor-pointer" src="images/images-removebg-preview.png" alt="logo">
+                    <button></button></a>
+                </div>
+                <div class="links hidden md:block flex gap-14 mx-auto">
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="index.html">Home-Page</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="gallery.html">Media</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="About.html">About</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="Q&A.html">Q&A</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="Contact.html">Contact-Us</a>
+                </div>
+                <div class="icon text-white cursor-pointer text-[26px] absolute top-6 right-6" id="burger">
+                    <i class="fa-solid fa-bars md:hidden"></i>
+                </div>
+            </nav>
+        </header>
+
+        <script>
+            const burgerIcon = document.getElementById('burger');
+            const navLinks = document.querySelector('.links');
+    
+            burgerIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('hidden');
+            });
+        </script>
+        <main class="container mx-auto mt-3 max-w-[650px]">
+            <div id="carouselExampleCrossfade" class="relative" data-twe-carousel-init data-twe-ride="carousel">
+                <!--Carousel indicators-->
+                <div class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+                    data-twe-carousel-indicators>
+                    <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="0"
+                        data-twe-carousel-active
+                        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="1"
+                        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="2"
+                        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide-to="3"
+                        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+                        aria-label="Slide 4"></button>
+                </div>
+
+                <!--Carousel items-->
+                <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                    <!--First item-->
+                    <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-twe-carousel-fade data-twe-carousel-item data-twe-carousel-active>
+                        <img src="images/bmw.png" class="block w-full" alt="bmw" />
+                        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                            <h5 class="text-xl">BMW ThunderX</h5>
+                            <p>
+                                A sleek, electric concept designed for urban speedsters, blending cutting-edge
+                                technology with timeless elegance.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Second item-->
+                    <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-twe-carousel-fade data-twe-carousel-item>
+                        <img src="images/hellcat.png" class="block w-full" alt="Hellcat" />
+                        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                            <h5 class="text-xl">Hellcat Fury</h5>
+                            <p>
+                                A beastly muscle car exuding raw power and aggressive styling, built for adrenaline
+                                junkies who crave speed and performance.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Third item-->
+                    <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-twe-carousel-fade data-twe-carousel-item>
+                        <img src="images/tesla.png" class="block w-full" alt="Tesla" />
+                        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                            <h5 class="text-xl"> Tesla</h5>
+                            <p>
+                                A sleek, electric concept designed for urban speedsters, blending cutting-edge
+                                technology with timeless elegance.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Fourth item-->
+                    <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-twe-carousel-fade data-twe-carousel-item>
+                        <img src="images/mazda.png" class="block w-full" alt="Tesla" />
+                        <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                            <h5 class="text-xl"> Mazda MX5</h5>
+                            <p>
+                                The iconic roadster delivering exhilarating driving dynamics and timeless design,
+                                perfect for open-air adventures on winding roads.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Carousel controls - prev item-->
+                <button
+                    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                    type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide="prev">
+                    <span class="inline-block h-8 w-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </span>
+                    <span
+                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+                </button>
+                <!--Carousel controls - next item-->
+                <button
+                    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                    type="button" data-twe-target="#carouselExampleCrossfade" data-twe-slide="next">
+                    <span class="inline-block h-8 w-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </span>
+                    <span
+                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+                </button>
+            </div>
+        </main>
+        <div class="iframes">
+            <h1 class="text-white text-3xl text-center mt-6 mb-10">Some of our best renting cars:</h1>
+            <div class="container flex flex-wrap gap-10 mx-auto md:justify-around">
+                <div>
+                    <div data-aos="fade-right" class="tesla inline-block border-2 border-white border-solid"><iframe
+                            max-width="350" max-height="200" src="https://www.youtube.com/embed/3rwUEr0J7wg"
+                            title="Tesla Model 3 – First Ad / Commercial" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);"></iframe>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold mt-2 text-white">Tesla</h2>
+                        <p class="text-sm font-serif mt-2 text-white">Setting new standards in luxury electric vehicles,
+                            <span class="block">blending state-of-the-art technology with unparalleled comfort and
+                                sustainability.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div style="-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);" class="hellcat inline-block border-2 border-white border-solid">
+                        <iframe max-width="300" max-height="150" src="https://www.youtube.com/embed/FbilWUi3HUc"
+                            title="Dodge Hellcat Commercial 2016" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div>
+                        <h2 class="font-semibold mt-2 text-white">Hellcat Fury</h2>
+                        <p class="text-xs font-serif mt-2 text-white">With its roaring V8 engine and track-tuned
+                            suspension, it's
+                            the embodiment of American muscle,
+                            <span class="block"> ready to dominate the asphalt with its ferocious performance and
+                                unmistakable presence.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div data-aos="fade-left" class="mazda inline-block border-2 border-white border-solid">
+                        <iframe max-width="350" max-height="250" src="https://www.youtube.com/embed/jM6UwqhIIxY"
+                            title="Mazda MX 5 Reasons To Drive TV Commercial" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                            box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);"></iframe>
+                    </div>
+                    <div>
+                        <h2 class="mazda font-semibold mt-2 text-white">Mazda Mx-5</h2>
+                        <p class="text-xs font-serif mt-2 text-white">Setting new standards in luxury electric vehicles,
+                            <span class="block">blending state-of-the-art technology with unparalleled comfort and
+                                sustainability.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="buy  container flex flex-wrap gap-10 mx-auto">
+                <div data-aos="fade-right"
+                    class="container border-2 border-solid bg-gray-500 mt-5 p-4 max-w-[550px] max-h-[400px] relative top-8 inline-block">
+                    <h1 class="font-bold text-3xl text-black text-center">Rent your cars here:</h1>
+                    <div class="container flex flex-wrap gap-5 p-4">
+                        <div class="inline-block">
+                            <h5 class="text-lg font-semibold mb-2 text-black">Shop location:</h5>
+                            <input class="bg-gray-500 border text-white" placeholder="Date of Recording..." type="text">
+                        </div>
+                        <div class="inline-block">
+                            <h5 class="text-lg font-semibold mb-2 text-black">Deleivery Adress:</h5>
+                            <input class="bg-gray-500 border text-white" placeholder="Deleivery Adress..." type="text">
+                        </div>
+                    </div>
+                    <div class="container flex flex-wrap mt-3 p-4 gap-6">
+                        <div class="inline-block">
+                            <h5 class="text-lg font-semibold mb-2 text-black">Date of Recording:</h5>
+                            <input class="bg-gray-500 border text-white" placeholder="text-black" type="date">
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold mb-2 text-black">Time:</h5>
+                            <input class="bg-gray-500 border text-white" type="time">
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold mb-2 text-black">Date of Deleivery:</h5>
+                            <input class="bg-gray-500 border text-white" type="date">
+                        </div>
+                    </div>
+                    <button
+                        class="mt-2 rounded-full duration-300 animate-bounce bg-white hover:bg-green-600 text-black hover:text-white font-bold py-2 px-4">
+                        Send
+                    </button>
+                </div>
+                <img data-aos="fade-left" class="inline-block relative bottom-16 hidden sm:block" src="images/cars.png"
+                    alt="cars">
+            </div>
+            <div data-aos="fade-up"
+                class="container border-t border-b border-gray-400 mt-4 mb-8 mx-auto flex flex-wrap gap-1 justify-center content-center py-8 ">
+                <div>
+                    <div>
+                        <img class="inline w-60" src="images/spnoser2.png" alt="">
+                        <img class="inline w-60" src="images/sponser (1).png" alt="">
+                        <img class="inline w-60" src="images/sponser (2).png" alt="">
+                        <img class="inline w-60" src="images/sponser (4).png" alt="">
+                    </div>
+                    <img class="inline w-60" src="images/sponser6.png" alt="">
+                    <img class="inline w-60" src="images/sponser7.png" alt="">
+                    <img class="inline w-60" src="images/spnoser5.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-slate-400 max-h-screen flex flex-wrap justify-around p-6 mb-[1px]">
+        <div>
+            <img class="max-w-24" src="images/images-removebg-preview.png" alt="">
+            <p class="text-white mt-2 text-xl">Our email:</p>
+            <i class="fa-solid fa-envelope inline text-2xl"></i>
+            <p class="inline text-xl">RandomEmail@gmail.com</p>
+            <p class="text-white mt-2 text-xl">Our social links:</p>
+            <div class="flex gap-4 mt-2">
+                <a href="https://fmcrent.com/hu">
+                    <i class="fa-brands fa-twitter text-blue-500 text-2xl"></i>
+                    <button></button>
+                </a>
+                <a href="https://fmcrent.com/hu">
+                    <i class="fa-brands fa-facebook text-blue-800 text-2xl"></i>
+                    <button></button>
+                </a>
+                <a href="https://www.instagram.com/fmc.rent/" class="text-gray-500 hover:text-gray-700">
+                    <i class="fab fa-instagram text-red-600 text-2xl"></i>
+                    <button></button>
+                </a>
+            </div>
+            <p class="text-white mt-2 text-xl">Our location:</p>
+            <i class="fa-solid fa-location-dot inline mt-4 text-xl"></i>
+            <p class="inline text-xl">Uj Ecseri ut 2. Vecses</p>
+        </div>
+        <div class="flex items-center justify-end flex-col text-xl">
+            <h5 class="text-white underline"><span><i class="fa-regular fa-clock mr-1"></i></span>Activity Hours:</h5>
+            <p>Monday: 8:00-20:00</p>
+            <p>Tuesday: 8:00-20:00</p>
+            <p>Wednesday: 8:00-20:00</p>
+            <p>Thursday: 8:00-20:00</p>
+            <p>Friday: 8:00-18:00</p>
+            <p>Saturday: -------------</p>
+            <p>Sunday: 8:00-20:00</p>
+        </div>
+        <div class="flex items-center justify-end flex-col ">
+            <h5 class="text-white underline">Credits:</h5>
+            <p>Creator:Itay Eliran</p>
+            <p>Teacher:Michael Gabay</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+    <div class="body bg-gradient-to-br from-teal-400 to-blue-900 mt-0 w-screen">
+        <header class="sticky top-0 bg-gradient-to-br from-teal-400 to-blue-900 z-50">
+            <nav class="px-4 py-3 font-semibold text-[20px] text-white flex justify-evenly items-center">
+                <div>
+                    <a href="index.html">
+                        <img class="max-w-24 inline-block cursor-pointer" src="images/images-removebg-preview.png"
+                            alt="logo">
+                        <button></button></a>
+                </div>
+                <div class="links hidden md:block flex gap-14 mx-auto">
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse"
+                        href="index.html">Home-Page</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse"
+                        href="gallery.html">Media</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse"
+                        href="About.html">About</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse"
+                        href="Q&A.html">Q&A</a>
+                    |
+                    <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse"
+                        href="Contact.html">Contact-Us</a>
+                </div>
+                <div class="icon text-white cursor-pointer text-[26px] absolute top-6 right-6" id="burger">
+                    <i class="fa-solid fa-bars md:hidden"></i>
+                </div>
+            </nav>
+        </header>
+
+        <script>
+            const burgerIcon = document.getElementById('burger');
+            const navLinks = document.querySelector('.links');
+
+            burgerIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('hidden');
+            });
+        </script>
+
+        <main>
+            <div class="container mx-auto py-12" data-aos="zoom-in">
+                <h1 class="text-3xl font-serif font-bold text-center mb-6">Frequently Asked Questions</h1>
+                <div class="max-w-lg mx-auto">
+                    <!-- Question 1 -->
+                    <details class="mb-4">
+                        <summary class="font-semibold bg-gray-300 rounded-md py-2 px-4 cursor-pointer">What makes FMC
+                            Rental
+                            Car stand out in the competitive rental car industry?
+                        </summary>
+                        <p class="text-lg font-serif py-2 px-4">FMC Rental Car distinguishes itself through a
+                            combination of exceptional
+                            customer service, a diverse fleet of well-maintained vehicles, and competitive pricing. Our
+                            commitment to providing a seamless rental experience, along with our personalized approach
+                            to
+                            customer care, sets us apart from other rental car companies.</p>
+                    </details>
+                    <!-- Add more questions here -->
+                    <!-- Question 2 -->
+                    <details class="mb-4">
+                        <summary class="font-semibold bg-gray-300 rounded-md py-2 px-4 cursor-pointer">How does FMC
+                            Rental
+                            Car ensure the safety and satisfaction of its customers during the rental process?
+                        </summary>
+                        <p class="text-lg font-serif py-2 px-4">At FMC Rental Car, the safety and satisfaction of our
+                            customers are
+                            paramount.
+                            We conduct thorough vehicle inspections and maintenance checks before every rental to ensure
+                            that our fleet meets the highest safety standards. Additionally, our customer service team
+                            is
+                            available around the clock to address any concerns or issues that may arise during the
+                            rental
+                            period.</p>
+                    </details>
+                    <!-- Question 3 -->
+                    <details class="mb-4">
+                        <summary class="font-semibold bg-gray-300 rounded-md py-2 px-4 cursor-pointer">Can you elaborate
+                            on
+                            the range of vehicles available for rental at FMC and the flexibility of rental options
+                            offered?
+                        </summary>
+                        <p class="text-lg font-serif py-2 px-4">FMC Rental Car offers a wide range of vehicles to suit
+                            our customers'
+                            diverse
+                            needs, from compact cars for urban travel to spacious SUVs for family vacations. We also
+                            provide
+                            flexible rental options, including daily, weekly, and monthly rentals, as well as one-way
+                            rentals and long-term leasing arrangements. Our goal is to accommodate our customers'
+                            preferences and schedules to make their rental experience as convenient as possible.</p>
+                    </details>
+                    <!-- Question 4 -->
+                    <details class="mb-4">
+                        <summary class="font-semibold bg-gray-300 rounded-md py-2 px-4 cursor-pointer">What measures
+                            does FMC Rental Car take to contribute to environmental sustainability and reduce its carbon
+                            footprint in its operations?
+                        </summary>
+                        <p class="text-lg font-serif py-2 px-4">FMC Rental Car is committed to minimizing our
+                            environmental impact and
+                            promoting sustainability in our operations. We have implemented eco-friendly practices such
+                            as using fuel-efficient vehicles in our fleet, optimizing our rental processes to reduce
+                            paper waste, and investing in initiatives to offset carbon emissions. Additionally, we
+                            continuously explore innovative solutions to further reduce our carbon footprint and
+                            contribute to a greener future.</p>
+                    </details>
+                    <!-- Question 5 -->
+                    <details class="mb-4">
+                        <summary class="font-semibold bg-gray-300 rounded-md py-2 px-4 cursor-pointer">How does FMC
+                            ensure the safety and reliability of their rental cars?
+                        </summary>
+                        <p class="text-lg font-serif py-2 px-4">At FMC, safety and reliability are our top priorities.
+                            We meticulously maintain our rental fleet through regular inspections and rigorous servicing
+                            schedules. Each vehicle undergoes thorough checks for mechanical integrity, cleanliness, and
+                            safety features before being rented out. Additionally, we invest in advanced technology to
+                            monitor the performance of our cars in real-time, ensuring that any issues are promptly
+                            addressed. Our commitment to safety means you can trust FMC rental cars for a secure and
+                            worry-free driving experience.</p>
+                    </details>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <footer class="bg-slate-400 max-h-screen flex flex-wrap justify-around p-6">
+        <div>
+            <img class="max-w-24" src="images/images-removebg-preview.png" alt="">
+            <p class="text-white mt-2 text-xl">Our email:</p>
+            <i class="fa-solid fa-envelope inline text-2xl"></i>
+            <p class="inline text-xl">RandomEmail@gmail.com</p>
+            <p class="text-white mt-2 text-xl">Our social links:</p>
+            <div class="flex gap-4 mt-2">
+                <a href="https://fmcrent.com/hu">
+                    <i class="fa-brands fa-twitter text-blue-500 text-2xl"></i>
+                    <button></button>
+                </a>
+                <a href="https://fmcrent.com/hu">
+                    <i class="fa-brands fa-facebook text-blue-800 text-2xl"></i>
+                    <button></button>
+                </a>
+                <a href="https://www.instagram.com/fmc.rent/" class="text-gray-500 hover:text-gray-700">
+                    <i class="fab fa-instagram text-red-600 text-2xl"></i>
+                    <button></button>
+                </a>
+            </div>
+            <p class="text-white mt-2 text-xl">Our location:</p>
+            <i class="fa-solid fa-location-dot inline mt-4 text-xl"></i>
+            <p class="inline text-xl">Uj Ecseri ut 2. Vecses</p>
+        </div>
+        <div class="flex items-center justify-end flex-col text-xl">
+            <h5 class="text-white underline"><span><i class="fa-regular fa-clock mr-1"></i></span>Activity Hours:</h5>
+            <p>Monday: 8:00-20:00</p>
+            <p>Tuesday: 8:00-20:00</p>
+            <p>Wednesday: 8:00-20:00</p>
+            <p>Thursday: 8:00-20:00</p>
+            <p>Friday: 8:00-18:00</p>
+            <p>Saturday: -------------</p>
+            <p>Sunday: 8:00-20:00</p>
+        </div>
+        <div class="flex items-center justify-end flex-col ">
+            <h5 class="text-white underline">Credits:</h5>
+            <p>Creator:Itay Eliran</p>
+            <p>Teacher:Michael Gabay</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

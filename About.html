@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body data-aos="flip-left">
+    <header class="sticky top-0 bg-gradient-to-br from-teal-400 to-blue-900 z-50">
+        <nav class="px-4 py-3 font-semibold text-[20px] text-white flex justify-evenly items-center">
+            <div>
+                <a href="index.html">
+                <img class="max-w-24 inline-block cursor-pointer" src="images/images-removebg-preview.png" alt="logo">
+                <button></button></a>
+            </div>
+            <div class="links hidden md:block flex gap-14 mx-auto">
+                <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="index.html">Home-Page</a>
+                |
+                <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="gallery.html">Media</a>
+                |
+                <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="About.html">About</a>
+                |
+                <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="Q&A.html">Q&A</a>
+                |
+                <a class="hover:text-sky-400 hover:text-[22px] duration-500 hover:animate-pulse" href="Contact.html">Contact-Us</a>
+            </div>
+            <div class="icon text-white cursor-pointer text-[26px] absolute top-6 right-6" id="burger">
+                <i class="fa-solid fa-bars md:hidden"></i>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const burgerIcon = document.getElementById('burger');
+        const navLinks = document.querySelector('.links');
+
+        burgerIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+    
+        <main style="background: rgb(249,222,185);
+     background: linear-gradient(90deg, rgba(249,222,185,1) 0%, rgba(249,222,185,1) 100%);">
+            <div class="flex flex-wrap justify-center p-16 pb-5">
+                <h1 class="text-black font-semibold text-4xl font-serif">About us:</h1>
+                <p class="font-serif text-xl mt-3 text-center">
+                    At FMC Rental, we believe in providing more than just cars; we offer experiences. With a passion for
+                    customer satisfaction and a commitment to excellence, we're your trusted partner for <span
+                        class="mt-3">
+                        all
+                        your car rental
+                        needs.
+
+                        Whether you're a seasoned traveler, a weekend explorer, or in need of a temporary replacement
+                        vehicle,
+                        we've
+                        got you covered. Our diverse fleet features the </span> <span class="mt-3">latest models,
+                        meticulously
+                        maintained and ready to hit the
+                        road at a moment's notice.
+
+                        What sets us apart is our dedication to convenience and flexibility. We understand that every
+                    </span>
+                    <span class="mt-3">journey is
+                        unique, which is why we offer customizable rental packages tailored to your specific
+                        requirements.
+                        Whether
+                        you need a compact car for urban adventures, a spacious SUV for </span> <span class="mt-3">
+                        family
+                        road
+                        trips, or a luxury vehicle for
+                        special occasions, we have the perfect solution for you.
+
+                        At FMC Rental, customer satisfaction is our top priority. Our friendly and knowledgeable </span>
+                    <span class="mt-3">staff are here to
+                        assist you every step of the way, from choosing the right vehicle to ensuring a seamless rental
+                        experience.
+                        With convenient booking options, competitive rates, and</span> <span class="mt-3">transparent
+                        policies,
+                        we strive to make renting a
+                        car as effortless as possible.
+
+                        Experience the difference with FMC Rental and let us be your partner on the road to
+                        unforgettable</span><span class="mt-3">
+                        adventures. Book your next rental with us and discover why we're the preferred choice for
+                        discerning
+                        travelers everywhere.</span>
+                </p>
+            </div>
+            <h3 class="text-center text-black text-3xl font-bold font-serif">Interducing Bob:</h3>
+            <div class="w-72 h-72 overflow-hidden border-2 rounded-full mx-auto mt-5">
+                <img src="images/Founder.jpg" alt="Your Image" class="w-full h-full object-cover">
+            </div>
+            <p class="font-serif text-xl mt-3 text-center p-4">Meet Bob, the founder of Bob's FMC Rental Car Company.
+                With a zest for life and a love for adventure, Bob turned his passion for travel into a thriving
+                business. From humble beginnings, he built his company on the principles of excellent service and
+                reliable vehicles, ensuring every customer embarks on their journey with confidence. As both an
+                entrepreneur and a traveler, Bob's personal touch and commitment to quality make renting from his
+                company an experience like no other.</p>
+        </main>
+    </div>
+    <footer class="bg-slate-400 max-h-screen flex flex-wrap justify-around p-6 mb-[1px]">
+        <div>
+            <img class="max-w-24" src="images/images-removebg-preview.png" alt="">
+            <p class="text-white mt-2 text-xl">Our email:</p>
+            <i class="fa-solid fa-envelope inline text-2xl"></i>
+            <p class="inline text-xl">RandomEmail@gmail.com</p>
+            <p class="text-white mt-2 text-xl">Our social links:</p>
+            <div class="flex gap-4 mt-2">
+                <a href="https://fmcrent.com/hu">
+                    <i class="fa-brands fa-twitter text-blue-500 text-2xl"></i>
+                    <button></button>
+                </a>
+                <a href="https://fmcrent.com/hu">
+                    <i class="fa-brands fa-facebook text-blue-800 text-2xl"></i>
+                    <button></button>
+                </a>
+                <a href="https://www.instagram.com/fmc.rent/" class="text-gray-500 hover:text-gray-700">
+                    <i class="fab fa-instagram text-red-600 text-2xl"></i>
+                    <button></button>
+                </a>
+            </div>
+            <p class="text-white mt-2 text-xl">Our location:</p>
+            <i class="fa-solid fa-location-dot inline mt-4 text-xl"></i>
+            <p class="inline text-xl">Uj Ecseri ut 2. Vecses</p>
+        </div>
+        <div class="flex items-center justify-end flex-col text-xl">
+            <h5 class="text-white underline"><span><i class="fa-regular fa-clock mr-1"></i></span>Activity Hours:</h5>
+            <p>Monday: 8:00-20:00</p>
+            <p>Tuesday: 8:00-20:00</p>
+            <p>Wednesday: 8:00-20:00</p>
+            <p>Thursday: 8:00-20:00</p>
+            <p>Friday: 8:00-18:00</p>
+            <p>Saturday: -------------</p>
+            <p>Sunday: 8:00-20:00</p>
+        </div>
+        <div class="flex items-center justify-end flex-col ">
+            <h5 class="text-white underline">Credits:</h5>
+            <p>Creator:Itay Eliran</p>
+            <p>Teacher:Michael Gabay</p>
+        </div>
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
